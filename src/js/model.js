@@ -26,3 +26,11 @@ export const loadRecipe = async function (id) {
     throw err;
   }
 };
+
+export const loadSearchResults = async function (query) {
+  try {
+    const data = await getJSON(`${API_URL}?search=${query}`);
+  } catch (err) {
+    throw err;
+  }
+};
